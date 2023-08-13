@@ -1,0 +1,146 @@
+.tab-body {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-left: 7.5%;
+  gap: 28px;
+  max-width: 1160px;
+}
+
+.tab-body button {
+  width: 38px;
+  height: 38px;
+  flex-shrink: 0;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.tab-body button:disabled {
+  opacity: 0.5;
+  box-shadow: none;
+  cursor: auto;
+}
+
+.arrow {
+  opacity: 1;
+  scale: 1.03;
+  transition: opacity 0.5s ease, scale 0.5s ease;
+}
+
+.arrow:hover {
+  opacity: 0.9;
+  scale: 1.06;
+}
+
+button circle {
+  fill: var(--color-light);
+}
+
+.arrow path {
+  stroke: var(--text-secondary-color);
+}
+
+.tab-body__items {
+  display: flex;
+  overflow: hidden;
+  min-width: 80%;
+  height: 143px;
+  position: relative;
+  max-width: 100%;
+}
+
+.tab-body__item {
+  display: none;
+  visibility: hidden;
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 500ms ease-in-out 0ms, transform 500ms ease-in-out 0ms;
+}
+
+.active-item {
+  position: absolute;
+  display: flex;
+  justify-content: start;
+  visibility: visible;
+  gap: 24px;
+  opacity: 1;
+  overflow: hidden;
+  transform: scale(1);
+  transition: all 0.5s ease;
+  animation: showItems 0.8s;
+}
+
+@keyframes showItems {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* М Е Д И А   З А П Р О с Ы*/
+
+@media (min-width: 834px) and (max-width: 1439px) {
+  .tab-body {
+    padding: 0;
+    gap: 0;
+    justify-content: center;
+  }
+  .tab-body__items {
+    justify-content: flex-start;
+    min-width: 70%;
+    margin: 0 2%;
+  }
+}
+
+@media (min-width: 1000px) and (max-width: 1040px) {
+  .tab-body {
+    max-width: 512px;
+    justify-content: center;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 1090px) and (max-width: 1200px) {
+  .tab-body__items {
+    width: 68%;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 833px) {
+  .tab-body {
+    padding: 7%;
+    justify-content: center;
+  }
+  .tab-body button {
+    display: none;
+  }
+  .tab-body__items {
+    overflow: visible;
+    justify-content: center;
+    height: auto;
+  }
+  .active-item {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 22%;
+  }
+  .week::after {
+    content: "";
+    flex: auto;
+    max-width: 100px;
+  }
+  .card {
+    padding: 14px 0;
+    margin-bottom: 12%;
+  }
+  .card__card-body {
+    margin-bottom: -18px;
+  }
+  .additional_card {
+    display: flex;
+  }
+}

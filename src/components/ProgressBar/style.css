@@ -1,0 +1,26 @@
+.containerStyles {
+  position: relative;
+  height: 11px;
+  width: 80%;
+  background-color: var(--progress-bar-bg);
+  border-radius: 50px;
+  margin-top: 15px;
+}
+.containerText {
+  color: var(--text-main-color);
+  font-size: 12px;
+  font-weight: 300;
+}
+.containerStyles__top-info {
+  position: absolute;
+  width: 100%;
+  top: -15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.containerStyles__percent {
+  position: absolute;
+  top: 15px;
+  right: 0;
+}

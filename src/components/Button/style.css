@@ -1,0 +1,39 @@
+.btn {
+  color: var(--text-main-color);
+  padding: 14px 0;
+  outline: none;
+  border: solid 2px var(--text-secondary-color);
+  border-radius: 10px;
+  background: transparent;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.btn__show {
+  padding-left: 27px;
+  padding-right: 27px;
+}
+
+.btn__search {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.btn-text {
+  color: var(--text-main-color);
+  text-align: center;
+  font-size: 17.5px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.btn:hover {
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  box-shadow: none;
+  cursor: auto;
+}

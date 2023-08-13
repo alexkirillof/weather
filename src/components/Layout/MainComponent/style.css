@@ -1,0 +1,247 @@
+/* О С Н О В Н О Й   Э К Р А Н*/
+
+.main-block {
+  width: 68%;
+  height: auto;
+  background-color: var(--color-bg);
+  display: flex;
+  flex-direction: column;
+  padding-top: 40px;
+}
+
+.main-block-wrapper {
+  width: 100%;
+  padding-left: 14.15%;
+}
+
+/* П О Д Р О Б Н О   Н А  С Е Г О Д Н Я*/
+
+.details {
+  padding-top: 38px;
+}
+
+.details h2 {
+  margin-bottom: 19px;
+}
+
+.details-cards {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 720px;
+}
+
+.details-cards__card-detail {
+  background: var(--color-light);
+  display: flex;
+  max-width: 320px;
+  width: 54%;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 10px;
+  box-shadow: 0 8px 15px 0 rgba(0, 0, 0, 0.05);
+  padding: 19px 25px 0 25px;
+  margin-bottom: 18px;
+  cursor: pointer;
+}
+
+.details-cards__card-detail:nth-child(even) {
+  padding-bottom: 23px;
+}
+
+.card-datail:nth-child(even) {
+  margin-left: 80px;
+}
+
+.card-datail__header {
+  color: var(--text-main-color);
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 21px;
+}
+
+.first-header {
+  margin-bottom: 11px;
+}
+
+.card-detail__main-content {
+  color: var(--text-main-color);
+  font-size: 64px;
+  font-weight: 900;
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  margin-bottom: 13px;
+}
+
+.card-detail__main-content span {
+  color: var(--text-main-color);
+  font-size: 64px;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.card-detail__main-content span:nth-child(2n) {
+  color: var(--text-main-color);
+  font-size: 36px;
+  font-weight: 500;
+}
+
+.secondary-content {
+  font-size: 18px !important;
+}
+
+.card-detail__footer {
+  display: flex;
+  align-items: center;
+  margin-bottom: 14px;
+  margin-left: 15px;
+  gap: 13px;
+}
+
+.card-detail__footer span {
+  color: var(--text-main-color);
+  font-size: 18px;
+  font-weight: 300;
+}
+
+/* М Е Д И А   З А П Р О с Ы*/
+
+@media (min-width: 834px) and (max-width: 1439px) {
+  .App {
+    min-width: 834px;
+  }
+  .main-block {
+    width: 60.5%;
+    padding: 58px 0;
+  }
+  .main-block-wrapper {
+    padding-left: 15%;
+  }
+  .forecast {
+    margin-bottom: 7px;
+  }
+  .details {
+    padding-left: 0;
+  }
+  .details h2 {
+    padding-left: 15%;
+  }
+  .details-cards {
+    align-items: center;
+    flex-direction: column;
+    gap: 27px;
+  }
+  .details-cards__card-detail {
+    width: 64%;
+    padding-top: 23px;
+    margin-bottom: 0;
+  }
+  .card-datail:nth-child(even) {
+    margin-left: 0px;
+  }
+  .humidity {
+    padding-top: 19px;
+    padding-bottom: 0;
+  }
+  .details-cards__card-detail:nth-child(even) {
+    padding-bottom: 27px;
+  }
+  .visibility {
+    padding-bottom: 20px;
+  }
+  .pressure {
+    padding-bottom: 20px !important;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 833px) {
+  .App {
+    min-width: 375px;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+  }
+
+  .main-block {
+    width: 100%;
+    padding-top: 46px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .tab-headlines {
+    flex-direction: column;
+    gap: 25px;
+    margin-bottom: 14px;
+  }
+  .forecast {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 0;
+  }
+  .main-block-wrapper {
+    padding: 0;
+  }
+  .tab-headlines__items {
+    margin-left: 0;
+    gap: 43px;
+  }
+  .week::after {
+    content: "";
+    flex: auto;
+    max-width: 100px;
+  }
+  .card {
+    padding: 14px 0;
+    margin-bottom: 12%;
+  }
+
+  .card__card-body {
+    margin-bottom: -18px;
+  }
+  .additional_card {
+    display: flex;
+  }
+  .details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .details h2 {
+    margin-bottom: 14px;
+  }
+  .details-cards {
+    padding: 5% 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: nowrap;
+    max-width: 720px;
+  }
+  .card-datail:nth-child(even) {
+    margin-left: 0;
+  }
+
+  .details-cards__card-detail {
+    width: 166%;
+    padding: 13px 25px 0 25px;
+  }
+  .wind-speed {
+    margin-bottom: 15%;
+  }
+  .humidity {
+    padding-top: 7%;
+    padding-bottom: 11% !important;
+    margin-bottom: 8%;
+  }
+  .visibility {
+    padding-top: 6%;
+    padding-bottom: 10% !important;
+    margin-bottom: 10%;
+  }
+  .pressure {
+    padding-top: 6%;
+    padding-bottom: 10% !important;
+  }
+}
